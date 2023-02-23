@@ -2,22 +2,18 @@
 
 /**
  * print_most_numbers - Prints most numbers
- * Return: last digit
+ * Return: last digit.
  */
 
 void print_most_numbers(void)
-
 {
-	int x;
+	int i;
 
-	for (x = 0; x <= 9; x++)
+	for (i = 0; i < 10; i++)
 	{
-	if (x ==2 || x == 4)
-	continue;
-	}
-	else
-	{
-	_putchar(x + '0');
+		if (i == 2 || i == 4)
+			continue;
+	_putchar(i + '0');
 	}
 	_putchar('\n');
 }
