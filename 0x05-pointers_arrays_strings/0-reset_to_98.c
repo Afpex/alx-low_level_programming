@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - a function that takkes a pointer to an int as parameter
+ * main - a function that takes a pointer to an int as parameter
  * and updates the value it points to to 98
  * @n: input
  * Return: n
