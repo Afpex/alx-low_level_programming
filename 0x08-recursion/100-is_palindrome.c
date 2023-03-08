@@ -16,10 +16,10 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * pl - checks whether a string is a palindrome or not
+ * p1 - checks whether a string is a palindrome or not
  * @s: pointer to string
- * @1: shows that the string is a palindrome
- * Return: boolean
+ * @l: length of string
+ * Return: 1 if the string is a palindrome, 0 otherwise
  */
 
 int p1(char *s, int l)
