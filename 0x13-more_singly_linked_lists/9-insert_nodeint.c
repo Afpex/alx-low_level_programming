@@ -18,14 +18,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	new_node->n = n;
 
-	if (index == 0)
+	if (idx == 0)
 	{
 		new_node->next = *head;
 		*head = new_node;
 		return (new_node);
 	}
 
-	for (i = 0; i < index - 1 && temp != NULL; i++)
+	for (i = 0; i < idx - 1 && temp != NULL; i++)
 		temp = temp->next;
 
 	if (temp == NULL)
