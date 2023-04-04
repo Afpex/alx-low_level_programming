@@ -4,7 +4,7 @@
  * free_linked_list - Frees a linked list of listint_t nodes
  * @head: Pointer to the first element of the list
  */
-void free_linked_list(listint_t **head)
+void free_listint2(listint_t **head)
 {
 	listint_t *current_node, *next_node;
 
