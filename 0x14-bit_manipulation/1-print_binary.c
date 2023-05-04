@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_binary - prints the binary representation of a number
@@ -6,18 +7,28 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1;
-	int bitCount = 0;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	while ((mask << 1) <= n)
-	{
-		mask <<= 1;
-		bitCount++;
-	}
+	putchar((n & 1) + '0');
+}
 
-	for (; bitCount >= 0; bitCount--)
-	{
-		putchar((n & mask) ? '1' : '0');
-		mask >>= 1;
-	}
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	print_binary(0);
+	printf("\n");
+	print_binary(1);
+	printf("\n");
+	print_binary(98);
+	printf("\n");
+	print_binary(1024);
+	printf("\n");
+	print_binary((1UL << 10) + 1);
+	printf("\n");
+	return (0);
 }
