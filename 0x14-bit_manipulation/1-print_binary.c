@@ -9,34 +9,43 @@
 
 void print_binary(unsigned long int n)
 {
+	if (n == 0) {
+		putchar('0');
+		return;
+	}
 	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
 
 	while (mask > 0)
 	{
 		if (n & mask)
 		{
-			printf("1");
+			putchar('1');
 		}
 		else
 		{
-			printf("0");
+			putchar('0');
 		}
 		mask >>= 1;
 	}
 }
 
 /**
- * main - Entry point
+ * main - check the code
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 
 int main(void)
 {
-	unsigned long int num = 42;
-
-	printf("Binary representation of %lu: ", num);
-	print_binary(num);
+	print_binary(0);
+	printf("\n");
+	print_binary(1);
+	printf("\n");
+	print_binary(98);
+	printf("\n");
+	print_binary(1024);
+	printf("\n");
+	print_binary((1 << 10) + 1);
 	printf("\n");
 	return (0);
 }
